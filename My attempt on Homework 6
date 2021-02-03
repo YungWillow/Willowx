@@ -1,0 +1,38 @@
+
+# Asking the User for the Board's size
+
+print("How many rows should your Board have?")
+rows = int(input())
+print("How many columns should your Board have?")
+visible_columns = int(input())
+
+# Switching from rows to lines
+if rows > 1:
+    lines = (rows*2) - 1
+else:
+    lines = 1
+
+#switching from visible_columns to "printed" columns
+columns = (visible_columns * 2) - 1
+
+#drawing the board:
+def drawBoard(lines, columns):
+    for l in range(lines):
+        if l % 2 == 0:
+            for c in range(columns):
+                if c == columns - 1:
+                    print(" ")
+                elif c % 2 == 0:
+                    print(" ", end="")
+                else:
+                    print("|", end="")
+        else:
+            print("-"*columns)
+            
+#This are the parameters for the extra credit. You have to change it according to your screen and terminal size.
+    if rows <= 43 and visible_columns <= 213:
+        return True
+    else:
+        return False
+
+drawBoard(lines,columns)
