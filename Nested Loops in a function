@@ -12,3 +12,44 @@ def fun(rows,columns):
         else:
             print("_____")
 fun(5,6)
+
+
+
+#Sorry I'm new to Github and have not figured it out that well. But here is my Homework 6 Assignment
+
+# Asking the User for the Board's size
+
+print("How many rows should your Board have?")
+rows = int(input())
+print("How many columns should your Board have?")
+visible_columns = int(input())
+
+# Switching from rows to lines
+if rows > 1:
+    lines = (rows*2) - 1
+else:
+    lines = 1
+
+#switching from visible_columns to "printed" columns
+columns = (visible_columns * 2) - 1
+
+#drawing the board:
+def drawBoard(lines, columns):
+    for l in range(lines):
+        if l % 2 == 0:
+            for c in range(columns):
+                if c == columns - 1:
+                    print(" ")
+                elif c % 2 == 0:
+                    print(" ", end="")
+                else:
+                    print("|", end="")
+        else:
+            print("-"*columns)
+# This two lines are for the extra credit and the numbers refer to my Screen size. So you probably have to change them.
+    if rows <= 43 and visible_columns <= 213:
+        return True
+    else:
+        return False
+
+drawBoard(lines,columns)
