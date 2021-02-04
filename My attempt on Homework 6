@@ -1,21 +1,3 @@
-def fun(rows,columns):
-    for row in range(rows):
-        if row%2 == 0:
-            for column in range(1,columns):
-                if column%2 == 1:
-                    if column != rows:
-                        print(" ", end='')
-                    else:
-                        print(" ")
-                else:
-                    print("|",end='')
-        else:
-            print("_____")
-fun(5,6)
-
-
-
-#Sorry I'm new to Github and have not figured it out that well. But here is my Homework 6 Assignment
 
 # Asking the User for the Board's size
 
@@ -46,7 +28,8 @@ def drawBoard(lines, columns):
                     print("|", end="")
         else:
             print("-"*columns)
-# This two lines are for the extra credit and the numbers refer to my Screen size. So you probably have to change them.
+            
+#This are the parameters for the extra credit. You have to change it according to your screen and terminal size.
     if rows <= 43 and visible_columns <= 213:
         return True
     else:
